@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en-US"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Shop</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Shop.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 8.6.2, nicepage.com">
+
+
+
+
+
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Utah Brazilian Festival  2026",
+		"logo": "images/UBF_Colorful.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Shop">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  <script>
+    (function() {
+    function gdprConfirmed() {
+        return true;
+    }
+
+    var added = false;
+    var currentScript = document.currentScript;
+
+    function insertHTML(html) {
+        var container = document.createElement('div');
+        container.innerHTML = html;
+        container.querySelectorAll('script').forEach(s => {
+            const ns = document.createElement('script');
+            ns.async = s.async;
+            if (s.src) {
+                ns.src = s.src;
+            } else {
+                ns.textContent = s.textContent;
+            }
+            s.replaceWith(ns);
+        });
+
+            var fragment = document.createDocumentFragment();
+            fragment.append(...container.childNodes);
+
+            if (currentScript && currentScript.parentNode) {
+                currentScript.after(fragment);
+            }
+    }
+
+    window._npAddGAnalytics = function () {
+        if (gdprConfirmed() && !added) {
+            var gaBody = "<!-- Google Analytics -->\n    <gascript async src=\"https://www.googletagmanager.com/gtag/js?id=G-N2XQHR16XZ\"></gascript>\n    <gascript>\n        window.dataLayer = window.dataLayer || [];\n        function gtag(){dataLayer.push(arguments);}\n        gtag('js', new Date());\n        gtag('config', 'G-N2XQHR16XZ');\n    </gascript>\n    <!-- End Google Analytics -->";
+            var replacedBody = gaBody.replace(/gascript/g, 'script');
+            insertHTML(replacedBody);
+            added = true;
+        }
+    }
+
+    window._npAddGAnalytics();
+    })();
+    </script><meta name="referrer" content="origin"><script>
+    window.recaptchaRenderedV2 = false;
+    window.recaptchaFallback = false;
+    window.recaptchaSiteKeyV2 = '6LebRIorAAAAAEBCYCVXLpZKNt1KxwfbefWqDvFL';
+
+    function gdprConfirmed() {
+        return true;
+    }
+
+    function dynamicLoadScript() {
+        var script = document.createElement('script');
+        script.src = 'https://www.google.com/recaptcha/api.js?render=6LepmIorAAAAAOBS8hQCdl-qPMLC3n2AucNtUjPt';
+        script.async = true;
+        script.onload = function () {
+            var event = new CustomEvent("recaptchaLoaded");
+            document.dispatchEvent(event);
+        };
+        document.body.appendChild(script);
+    }
+
+    function showRecaptchaError(error) {
+        error = error || '';
+        var formError = document.querySelector('.u-form-send-error');
+
+        if (formError) {
+            formError.innerText = 'Site Owner Error: ' + error.replace(/:[\s\S]*/, '');
+            formError.style.display = 'block';
+        }
+
+        console.error('Error in grecaptcha: ', error);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var confirmButtons = document.querySelectorAll('.u-cookies-consent .u-button-confirm');
+        confirmButtons.forEach(function (button) {
+            button.onclick = dynamicLoadScript;
+        });
+    });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            if (!gdprConfirmed()) {
+                return;
+            }
+            dynamicLoadScript();
+        });
+    </script>
+
+    <script>
+        document.addEventListener("recaptchaLoaded", function() {
+            if (!gdprConfirmed()) {
+                return;
+            }
+
+            (function (grecaptcha, sitekey, actions) {
+                var recaptcha = {
+                    execute: function (action, submitFormCb) {
+                        if (typeof grecaptcha === 'undefined' || typeof grecaptcha.execute !== 'function') {
+                            showRecaptchaError('reCAPTCHA script failed to load.');
+                            return;
+                        }
+
+                        try {
+                            grecaptcha.execute(sitekey, {action: action}).then((token) => {
+                                if (!token) {
+                                    throw new Error('Empty token received from reCAPTCHA');
+                                }
+
+                                var forms = document.getElementsByTagName('form');
+
+                                for (var i = 0; i < forms.length; i++) {
+                                    var response = forms[i].querySelector('[name="recaptchaResponse"]');
+
+                                    if (!response) {
+                                        response = document.createElement('input');
+                                        response.setAttribute('type', 'hidden');
+                                        response.setAttribute('name', 'recaptchaResponse');
+                                        forms[i].appendChild(response);
+                                    }
+
+                                    response.value = token;
+                                }
+
+                                submitFormCb();
+                            }).catch((e) => {
+                                showRecaptchaError(e.message);
+                            });
+                        } catch (e) {
+                            showRecaptchaError(e.message);
+                        }
+                    },
+
+                    executeContact: function (submitFormCb) {
+                        recaptcha.execute(actions['contact'], submitFormCb);
+                    }
+                };
+
+                window.recaptchaObject = recaptcha;
+                window.grecaptchaObject = grecaptcha;
+            })(
+                grecaptcha,
+
+                '6LepmIorAAAAAOBS8hQCdl-qPMLC3n2AucNtUjPt',
+                {'contact': 'contact'}
+            );
+        });
+    </script>
+
+    <script>
+    window.showRecaptchaV2 = function (form) {
+        if (!form || !form.length) {
+            return;
+        }
+        if (typeof window.grecaptchaObject === 'undefined' || !window.grecaptchaObject) {
+            return;
+        }
+
+        const formEl = form[0];
+
+        let container = document.getElementById('recaptcha-v2-container');
+        if (!container) {
+            container = document.createElement('div');
+            container.id = 'recaptcha-v2-container';
+            formEl.parentElement.appendChild(container);
+        }
+
+        let tokenReceived = false;
+        let timeoutHandle;
+
+        if (window.recaptchaRenderedV2 === false || typeof window.recaptchaRenderedV2 === 'undefined') {
+            window.recaptchaRenderedV2 = window.grecaptchaObject.render('recaptcha-v2-container', {
+                'sitekey': window.recaptchaSiteKeyV2,
+                'size': 'invisible',
+                'callback': function (token) {
+                    clearTimeout(timeoutHandle);
+
+                    if (!token) {
+                        showRecaptchaError('reCAPTCHA v2 token was empty. Please try again.');
+                        return;
+                    }
+
+                    tokenReceived = true;
+
+                    let recaptchaResponseV2 = formEl.querySelector('input[name="recaptchaResponseV2"]');
+
+                    if (!recaptchaResponseV2) {
+                        recaptchaResponseV2 = document.createElement('input');
+                        recaptchaResponseV2.type = 'hidden';
+                        recaptchaResponseV2.name = 'recaptchaResponseV2';
+                        formEl.appendChild(recaptchaResponseV2);
+                    }
+
+                    recaptchaResponseV2.value = token;
+
+                    if (window.recaptchaSiteKeyV2) {
+                        let siteKeyInput = formEl.querySelector('input[name="siteKey"]');
+
+                        if (siteKeyInput) {
+                            siteKeyInput.value = window.recaptchaSiteKeyV2;
+                        }
+                    }
+
+                    document.querySelectorAll('.u-form-send-error').forEach(el => {
+                        el.style.display = 'none';
+                    });
+
+                    const event = new CustomEvent('submit', {
+                        detail: { recaptchaPassed: true },
+                        bubbles: true,
+                        cancelable: true,
+                    });
+
+                    formEl.dispatchEvent(event);
+                },
+                'error-callback': function () {
+                    clearTimeout(timeoutHandle);
+                    showRecaptchaError('reCAPTCHA v2 error. Please try again.');
+                },
+                'expired-callback': function () {
+                    clearTimeout(timeoutHandle);
+                }
+            });
+
+            window.grecaptchaObject.reset(window.recaptchaRenderedV2);
+
+            setTimeout(() => {
+                window.grecaptchaObject.execute(window.recaptchaRenderedV2);
+            }, 300);
+
+            timeoutHandle = setTimeout(function () {
+                if (!tokenReceived) {
+                    showRecaptchaError('The Contact Form could not be submitted because Google reCAPTCHA v3 detected unusual activity from your connection. Please try again later, or complete the reCAPTCHA v2 challenge if it appears.');
+                }
+            }, 120000);
+        } else {
+            window.grecaptchaObject.reset(window.recaptchaRenderedV2);
+
+            setTimeout(() => {
+                window.grecaptchaObject.execute(window.recaptchaRenderedV2);
+            }, 300);
+        }
+    };
+    </script>
+<meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="./" data-include-products="true" class="u-body u-clearfix u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-8a6e"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="#" class="u-image u-logo u-image-1" data-image-width="1309" data-image-height="1201">
+          <img src="images/UBF_Colorful.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1" role="navigation">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#" tabindex="-1" aria-label="Open menu" aria-controls="1b27">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1" role="menubar"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-nav-link-2" href="./">Home</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-nav-link-2" href="About.html">About</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-nav-link-2" href="Shop.html">Shop</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse" id="1b27" role="region" aria-label="Menu panel">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close" tabindex="-1" aria-label="Close menu"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2" role="menubar"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="./">Home</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="About.html">About</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="Shop.html">Shop</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=HC4E6XPQ4BNSN" class="u-active-none u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-btn-1" target="_blank">Donate</a>
+      </div></header>
+    <section class="u-clearfix u-section-1" id="shop-section">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="shop-container">
+          <h1>Festival T&#8209;Shirts</h1>
+          <p>Support the Utah Brazilian Festival — grab your festival t-shirt!</p>
+
+          <div class="shop-product">
+            <div class="shop-product-image">
+              <img src="images/tshirt.png" alt="Utah Brazilian Festival T-Shirt" width="400" height="272">
+            </div>
+            <div class="shop-product-details">
+              <h2>Utah Brazilian Festival T-Shirt</h2>
+              <p class="shop-price">$30.00</p>
+
+              <div class="shop-options">
+                <div class="shop-field">
+                  <label for="shirt-size">Size</label>
+                  <select id="shirt-size" class="u-input u-input-rectangle">
+                    <option value="X-Small">X-Small</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium" selected="">Medium</option>
+                    <option value="Large">Large</option>
+                    <option value="X-Large">X-Large</option>
+                    <option value="XX-Large">XX-Large</option>
+                  </select>
+                </div>
+
+                <div class="shop-field">
+                  <label for="shirt-color">Color</label>
+                  <select id="shirt-color" class="u-input u-input-rectangle">
+                    <option value="White">White</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                  </select>
+                </div>
+
+                <div class="shop-field">
+                  <label for="shirt-qty">Quantity</label>
+                  <input type="number" id="shirt-qty" class="u-input u-input-rectangle" value="1" min="1" max="20">
+                </div>
+              </div>
+
+              <a href="#" id="add-to-cart-btn" class="u-active-none u-btn u-btn-rectangle u-button-style u-hover-none u-btn-1">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-left u-clearfix u-container-align-left u-section-2" id="cart-section">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="shop-container">
+          <h2>Your Cart</h2>
+          <div id="cart-empty-message" class="shop-cart-empty">Your cart is empty. Add a t-shirt above to get started.</div>
+          <div id="cart-items" class="shop-cart-items" hidden=""></div>
+          <div id="cart-summary" class="shop-cart-summary" hidden="">
+            <p><strong>Items:</strong> <span id="cart-item-count">0</span></p>
+            <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-left u-clearfix u-container-align-left u-section-3" id="checkout-section">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="shop-container">
+          <div class="shop-payment">
+            <h3>Complete Your Payment</h3>
+            <p>Total due: <strong>$<span id="checkout-total">0.00</span></strong></p>
+
+            <a href="#" id="pay-stripe" class="u-active-none u-btn u-btn-rectangle u-button-style u-hover-none u-btn-1">Pay with Card</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="u-align-center u-clearfix u-container-align-center u-footer u-grey-80 u-footer" id="sec-6a69"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Utah Brazilian Festival</p>
+      </div></footer>
+    <script class="u-script" type="text/javascript" src="Shop.js" defer=""></script>
+</body></html>

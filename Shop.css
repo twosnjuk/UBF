@@ -1,0 +1,156 @@
+.shop-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 22px 20px;
+}
+
+/* Unify the section headings (Your Cart, Checkout, Complete Your Payment). */
+#cart-section .shop-container h2,
+#checkout-section .shop-container h2,
+.shop-payment h3 {
+  font-size: 1.6rem;
+  margin: 0 0 12px;
+}
+
+.shop-container h1 {
+  margin-top: 0;
+  text-align: center;
+  font-size: clamp(1.8rem, 6vw, 3.25rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #478ac9;
+}
+
+#shop-section .shop-container > p {
+  text-align: center;
+}
+
+.shop-product {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 16px;
+}
+
+.shop-product-image img {
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.shop-product-details {
+  flex: 1;
+  min-width: 260px;
+}
+
+.shop-product-details h2 {
+  font-size: 1.6rem;
+  margin: 0 0 10px;
+}
+
+.shop-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #478ac9;
+  margin: 0 0 20px;
+}
+
+.shop-options {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.shop-field {
+  margin-bottom: 16px;
+}
+
+.shop-field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.shop-field select,
+.shop-field input {
+  max-width: 150px;
+}
+
+.shop-options #shirt-qty {
+  max-width: 90px;
+}
+
+.shop-cart-empty {
+  color: #666;
+  font-style: italic;
+}
+
+.shop-cart-items {
+  border-top: 1px solid #e0e0e0;
+  margin-top: 20px;
+}
+
+.shop-cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.shop-cart-item-desc {
+  flex: 1;
+}
+
+.shop-cart-item-price {
+  font-weight: 600;
+}
+
+.shop-cart-item-remove {
+  color: #c0392b;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.shop-cart-summary {
+  margin-top: 16px;
+  font-size: 1.15rem;
+}
+
+.shop-payment {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.shop-payment p {
+  margin: 0 0 12px;
+}
+
+.shop-payment #payment-note {
+  max-width: 320px;
+  margin-top: 6px;
+}
+
+.shop-payment .u-btn {
+  margin: 10px 10px 0 0;
+}
+
+.shop-btn-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .shop-product {
+    flex-direction: column;
+  }
+
+  .shop-product-image img {
+    max-width: 100%;
+  }
+}

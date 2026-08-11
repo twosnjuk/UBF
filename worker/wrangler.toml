@@ -1,0 +1,17 @@
+name = "ubf-checkout"
+main = "checkout.js"
+compatibility_date = "2025-01-01"
+
+# Route the /api/* path of your site to this Worker. Your live site runs on the
+# www host (the apex redirects to www before Workers run), so the route MUST be
+# on www. Your domain is proxied through Cloudflare, so this works once deployed.
+routes = [
+  { pattern = "www.utahbrazilianfestival.com/api/*", zone_name = "utahbrazilianfestival.com" }
+]
+
+# Used for success/cancel redirect URLs and CORS. This is your canonical host.
+[vars]
+SITE_ORIGIN = "https://www.utahbrazilianfestival.com"
+
+# STRIPE_SECRET_KEY is NOT stored here. Set it as an encrypted secret:
+#   wrangler secret put STRIPE_SECRET_KEY
