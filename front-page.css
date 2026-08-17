@@ -1,0 +1,46 @@
+/* Front page (index.html) — soft Brazilian beach backdrop behind the hero.
+   Kept in its own file so it's easy to tweak or remove. The white overlay in
+   the gradient lightens the image so text and the logo stay readable. */
+
+/* Paint the same faded photo on the header AND the hero. Using a fixed
+   (viewport-anchored) attachment makes both elements show one continuous
+   image with no seam between them, while leaving the rest of the page alone. */
+#sec-8a6e,
+#sec-edb2 {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.44)),
+    url("images/copacabana.jpg");
+  background-size: cover;
+  background-position: center 30%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Logo: use the transparent version (white background removed) so the beach
+   shows through around it instead of a white box. */
+#sec-edb2 .u-image-1 {
+  background-image: url("images/UBF_Colorful_transparent.png") !important;
+}
+
+/* Announcement: remove the grey card so only the words sit on the beach.
+   A soft white halo keeps the text readable over the photo. */
+#sec-edb2 .u-layout-cell-1 {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+#sec-edb2 .u-layout-cell-1 * {
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.95), 0 0 2px rgba(255, 255, 255, 0.9);
+}
+
+/* Mobile: fixed backgrounds are unreliable on iOS. Keep the beach on the hero
+   with normal scroll (a single element, so no seam) and drop it from the small
+   header. */
+@media (max-width: 768px) {
+  #sec-8a6e {
+    background-image: none;
+  }
+  #sec-edb2 {
+    background-attachment: scroll;
+    background-position: center;
+  }
+}
