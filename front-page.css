@@ -41,6 +41,13 @@
 #sec-edb2 .u-layout-cell-1 h1 b { font-size: 42px !important; }
 #sec-edb2 .u-layout-cell-1 h1 span { font-size: 34px !important; }
 
+/* Festive golden-yellow accent on the headline and date so they pop off the
+   photo; the place line stays white. The dark outline still applies. */
+#sec-edb2 .u-layout-cell-1 h1 b,
+#sec-edb2 .u-layout-cell-1 h1 span {
+  color: #ffd633 !important;
+}
+
 /* Sponsors + social headings sit directly on the photo too. */
 #carousel_6210 h1,
 #carousel_6210 h2,
