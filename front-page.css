@@ -6,7 +6,9 @@
    and keeps it in place as the page scrolls down to the sponsors. */
 #sec-8a6e,
 #sec-edb2,
-#carousel_6210 {
+#carousel_6210,
+#sec-df78,
+#carousel_0ee8 {
   background-image: url("images/festival.jpg");
   background-size: cover;
   background-position: center;
@@ -55,5 +57,9 @@
   #carousel_6210 h3 {
     color: #111111 !important;
     text-shadow: none !important;
+  }
+  #sec-df78,
+  #carousel_0ee8 {
+    background-image: none !important;
   }
 }
