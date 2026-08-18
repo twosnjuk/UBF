@@ -8,7 +8,9 @@
 #sec-edb2,
 #carousel_6210,
 #sec-df78,
-#carousel_0ee8 {
+#carousel_0ee8,
+#carousel_715c,
+#carousel_7da8 {
   background-image: url("images/festival.jpg");
   background-size: cover;
   background-position: center;
@@ -32,7 +34,13 @@
 #sec-edb2 .u-layout-cell-1 *,
 #carousel_6210 h1,
 #carousel_6210 h2,
-#carousel_6210 h3 {
+#carousel_6210 h3,
+#carousel_7da8 h1,
+#carousel_7da8 h2,
+#carousel_7da8 h3,
+#carousel_7da8 h4,
+#carousel_7da8 h5,
+#carousel_7da8 p {
   color: #ffffff !important;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.55) !important;
 }
@@ -59,7 +67,18 @@
     text-shadow: none !important;
   }
   #sec-df78,
-  #carousel_0ee8 {
+  #carousel_0ee8,
+  #carousel_715c,
+  #carousel_7da8 {
     background-image: none !important;
+  }
+  #carousel_7da8 h1,
+  #carousel_7da8 h2,
+  #carousel_7da8 h3,
+  #carousel_7da8 h4,
+  #carousel_7da8 h5,
+  #carousel_7da8 p {
+    color: #111111 !important;
+    text-shadow: none !important;
   }
 }
