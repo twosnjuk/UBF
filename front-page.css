@@ -24,12 +24,15 @@
   background-image: url("images/UBF_Colorful_transparent.png") !important;
 }
 
-/* Announcement: remove the grey card so only the words sit on the photo.
-   White text with a dark shadow (caption style) stays readable over the busy,
-   colorful crowd without washing the image out. */
+/* Announcement: replace the grey card with a soft dark frosted panel so the
+   white date/place text stays prominent over the busy, colorful photo without
+   the heavy look of the original card. */
 #sec-edb2 .u-layout-cell-1 {
-  background-color: transparent !important;
+  background-color: rgba(0, 0, 0, 0.38) !important;
   box-shadow: none !important;
+  border-radius: 16px !important;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
 }
 #sec-edb2 .u-layout-cell-1 *,
 #carousel_6210 h1,
@@ -42,7 +45,7 @@
 #carousel_7da8 h5,
 #carousel_7da8 p {
   color: #ffffff !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.55) !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 0 12px rgba(0, 0, 0, 0.7) !important;
 }
 
 /* Mobile: fixed backgrounds are unreliable on iOS. Keep the photo on the hero
