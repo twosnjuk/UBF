@@ -52,6 +52,18 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 0 12px rgba(0, 0, 0, 0.7) !important;
 }
 
+/* Sponsors: show the sponsors graphic as a centered panel floating over the
+   festival photo. */
+.ubf-sponsors-graphic {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
 /* Mobile: fixed backgrounds are unreliable on iOS. Keep the photo only on the
    hero (scroll), drop it from the header, and leave the other sections on their
    normal backgrounds. */
