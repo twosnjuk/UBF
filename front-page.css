@@ -1,9 +1,8 @@
-/* Front page (index.html) — festival photo backdrop.
-   Kept in its own file so it's easy to tweak or remove. */
+/* Front page (index.html) — festival photo backdrop, pinned behind the whole
+   content so it stays in place while scrolling. */
 
-/* Pin the festival photo behind the header, hero, AND the Sponsors section.
-   A fixed (viewport-anchored) attachment makes them share one continuous image
-   and keeps it in place as the page scrolls down to the sponsors. */
+/* All content sections share one fixed (viewport-anchored) festival photo, so
+   it holds still as the page scrolls. */
 #sec-8a6e,
 #sec-edb2,
 #carousel_6210,
@@ -18,23 +17,31 @@
   background-repeat: no-repeat;
 }
 
-/* Logo: use the transparent version (white background removed) so the photo
-   shows through around it instead of a white box. */
+/* Logo: transparent version so the photo shows through around it. */
 #sec-edb2 .u-image-1 {
   background-image: url("images/UBF_Colorful_transparent.png") !important;
 }
 
-/* Announcement: replace the grey card with a soft dark frosted panel so the
-   white date/place text stays prominent over the busy, colorful photo without
-   the heavy look of the original card. */
+/* Announcement: no card — a little larger white text with a dark outline +
+   drop shadow so the date/place stay prominent over the busy photo. */
 #sec-edb2 .u-layout-cell-1 {
-  background-color: rgba(0, 0, 0, 0.38) !important;
+  background-color: transparent !important;
   box-shadow: none !important;
-  border-radius: 16px !important;
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
 }
-#sec-edb2 .u-layout-cell-1 *,
+#sec-edb2 .u-layout-cell-1 * {
+  color: #ffffff !important;
+  text-shadow:
+    -1px -1px 0 rgba(0, 0, 0, 0.85),
+    1px -1px 0 rgba(0, 0, 0, 0.85),
+    -1px 1px 0 rgba(0, 0, 0, 0.85),
+    1px 1px 0 rgba(0, 0, 0, 0.85),
+    0 3px 10px rgba(0, 0, 0, 0.75) !important;
+}
+#sec-edb2 .u-layout-cell-1 h1 { font-size: 27px !important; }
+#sec-edb2 .u-layout-cell-1 h1 b { font-size: 42px !important; }
+#sec-edb2 .u-layout-cell-1 h1 span { font-size: 34px !important; }
+
+/* Sponsors + social headings sit directly on the photo too. */
 #carousel_6210 h1,
 #carousel_6210 h2,
 #carousel_6210 h3,
@@ -48,9 +55,9 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 0 12px rgba(0, 0, 0, 0.7) !important;
 }
 
-/* Mobile: fixed backgrounds are unreliable on iOS. Keep the photo on the hero
-   with normal scroll (a single element, so no seam), drop it from the small
-   header, and leave the Sponsors section on its normal grey background. */
+/* Mobile: fixed backgrounds are unreliable on iOS. Keep the photo only on the
+   hero (scroll), drop it from the header, and leave the other sections on their
+   normal backgrounds. */
 @media (max-width: 768px) {
   #sec-8a6e {
     background-image: none;
