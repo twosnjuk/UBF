@@ -1,40 +1,43 @@
-/* Front page (index.html) — soft Brazilian beach backdrop behind the hero.
-   Kept in its own file so it's easy to tweak or remove. The white overlay in
-   the gradient lightens the image so text and the logo stay readable. */
+/* Front page (index.html) — festival photo backdrop.
+   Kept in its own file so it's easy to tweak or remove. */
 
-/* Paint the same faded photo on the header AND the hero. Using a fixed
-   (viewport-anchored) attachment makes both elements show one continuous
-   image with no seam between them, while leaving the rest of the page alone. */
+/* Pin the festival photo behind the header, hero, AND the Sponsors section.
+   A fixed (viewport-anchored) attachment makes them share one continuous image
+   and keeps it in place as the page scrolls down to the sponsors. */
 #sec-8a6e,
-#sec-edb2 {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.44)),
-    url("images/copacabana.jpg");
+#sec-edb2,
+#carousel_6210 {
+  background-image: url("images/festival.jpg");
   background-size: cover;
-  background-position: center 30%;
+  background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
-/* Logo: use the transparent version (white background removed) so the beach
+/* Logo: use the transparent version (white background removed) so the photo
    shows through around it instead of a white box. */
 #sec-edb2 .u-image-1 {
   background-image: url("images/UBF_Colorful_transparent.png") !important;
 }
 
-/* Announcement: remove the grey card so only the words sit on the beach.
-   A soft white halo keeps the text readable over the photo. */
+/* Announcement: remove the grey card so only the words sit on the photo.
+   White text with a dark shadow (caption style) stays readable over the busy,
+   colorful crowd without washing the image out. */
 #sec-edb2 .u-layout-cell-1 {
   background-color: transparent !important;
   box-shadow: none !important;
 }
-#sec-edb2 .u-layout-cell-1 * {
-  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.95), 0 0 2px rgba(255, 255, 255, 0.9);
+#sec-edb2 .u-layout-cell-1 *,
+#carousel_6210 h1,
+#carousel_6210 h2,
+#carousel_6210 h3 {
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.55) !important;
 }
 
-/* Mobile: fixed backgrounds are unreliable on iOS. Keep the beach on the hero
-   with normal scroll (a single element, so no seam) and drop it from the small
-   header. */
+/* Mobile: fixed backgrounds are unreliable on iOS. Keep the photo on the hero
+   with normal scroll (a single element, so no seam), drop it from the small
+   header, and leave the Sponsors section on its normal grey background. */
 @media (max-width: 768px) {
   #sec-8a6e {
     background-image: none;
@@ -42,5 +45,15 @@
   #sec-edb2 {
     background-attachment: scroll;
     background-position: center;
+  }
+  #carousel_6210 {
+    background-image: none !important;
+    background-color: #f2f2f2 !important;
+  }
+  #carousel_6210 h1,
+  #carousel_6210 h2,
+  #carousel_6210 h3 {
+    color: #111111 !important;
+    text-shadow: none !important;
   }
 }
