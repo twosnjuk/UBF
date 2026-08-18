@@ -29,24 +29,14 @@
   box-shadow: none !important;
 }
 #sec-edb2 .u-layout-cell-1 * {
-  color: #ffffff !important;
-  text-shadow:
-    -1px -1px 0 rgba(0, 0, 0, 0.85),
-    1px -1px 0 rgba(0, 0, 0, 0.85),
-    -1px 1px 0 rgba(0, 0, 0, 0.85),
-    1px 1px 0 rgba(0, 0, 0, 0.85),
-    0 3px 10px rgba(0, 0, 0, 0.75) !important;
+  color: #ffe600 !important;
+  -webkit-text-stroke: 2px #000000 !important;
+  paint-order: stroke fill !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6) !important;
 }
 #sec-edb2 .u-layout-cell-1 h1 { font-size: 27px !important; }
 #sec-edb2 .u-layout-cell-1 h1 b { font-size: 42px !important; }
 #sec-edb2 .u-layout-cell-1 h1 span { font-size: 34px !important; }
-
-/* Festive golden-yellow accent on the headline and date so they pop off the
-   photo; the place line stays white. The dark outline still applies. */
-#sec-edb2 .u-layout-cell-1 h1 b,
-#sec-edb2 .u-layout-cell-1 h1 span {
-  color: #ffd633 !important;
-}
 
 /* Sponsors + social headings sit directly on the photo too. */
 #carousel_6210 h1,
