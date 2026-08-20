@@ -34,9 +34,21 @@
   paint-order: stroke fill !important;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6) !important;
 }
-#sec-edb2 .u-layout-cell-1 h1 { font-size: 27px !important; }
-#sec-edb2 .u-layout-cell-1 h1 b { font-size: 42px !important; }
-#sec-edb2 .u-layout-cell-1 h1 span { font-size: 34px !important; }
+/* Announcement shown as three stacked boxes, each sized to its text, on a
+   dark translucent panel so the yellow type pops. */
+#sec-edb2 .ubf-cal-box {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 12px;
+  padding: 5px 18px;
+  line-height: 1.18;
+  background: rgba(0, 0, 0, 0.42);
+  border-radius: 12px;
+}
+#sec-edb2 .ubf-cal-title { font-size: 31px; font-weight: 700; -webkit-text-stroke: 1.6px #000 !important; }
+#sec-edb2 .ubf-cal-date { font-size: 25px; font-weight: 700; -webkit-text-stroke: 1.6px #000 !important; }
+#sec-edb2 .ubf-cal-place { font-size: 19px; font-weight: 500; -webkit-text-stroke: 1.4px #000 !important; }
 
 /* Sponsors + social headings sit directly on the photo too. */
 #carousel_6210 h1,
