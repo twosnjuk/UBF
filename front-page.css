@@ -52,16 +52,71 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 0 12px rgba(0, 0, 0, 0.7) !important;
 }
 
-/* Sponsors: show the sponsors graphic as a centered panel floating over the
-   festival photo. */
-.ubf-sponsors-graphic {
-  display: block;
+/* Sponsors: three labeled tiers, each an auto-scrolling logo marquee that
+   pauses on hover. Logos sit on white tiles so they read over the photo. */
+.ubf-spon-title {
+  text-align: center;
+  margin: 0 0 24px;
+}
+.ubf-tier {
+  margin: 0 auto 26px;
+  max-width: 1100px;
+}
+.ubf-tier-label {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+.ubf-marquee {
+  overflow: hidden;
   width: 100%;
-  max-width: 760px;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
+.ubf-track {
+  display: flex;
+  width: max-content;
+  gap: 18px;
+  animation: ubf-scroll 45s linear infinite;
+}
+.ubf-marquee:hover .ubf-track {
+  animation-play-state: paused;
+}
+.ubf-logo {
+  flex: 0 0 auto;
+  height: 90px;
+  min-width: 120px;
+  padding: 12px 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ubf-logo img {
+  height: 100%;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  display: block;
+}
+/* Main sponsors: bigger tiles for prominence. */
+.ubf-tier-main .ubf-logo {
+  height: 120px;
+}
+@keyframes ubf-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ubf-track { animation: none; }
+  .ubf-marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
 }
 
 /* Mobile: fixed backgrounds are unreliable on iOS. Keep the photo only on the
