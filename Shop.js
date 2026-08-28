@@ -38,12 +38,12 @@
     }, 0);
   }
 
-  function addToCart(size, color, qty) {
+  function addToCart(size, qty) {
     var cart = getCart();
     var existing = null;
 
     for (var i = 0; i < cart.length; i++) {
-      if (cart[i].size === size && cart[i].color === color) {
+      if (cart[i].size === size) {
         existing = cart[i];
         break;
       }
@@ -52,7 +52,7 @@
     if (existing) {
       existing.qty += qty;
     } else {
-      cart.push({ size: size, color: color, qty: qty });
+      cart.push({ size: size, qty: qty });
     }
 
     saveCart(cart);
@@ -68,7 +68,7 @@
 
   function buildOrderSummary(cart, total) {
     var lines = cart.map(function (item) {
-      return "- " + item.qty + " x " + item.size + " / " + item.color + " ($" + formatMoney(item.qty * PRICE) + ")";
+      return "- " + item.qty + " x " + item.size + " ($" + formatMoney(item.qty * PRICE) + ")";
     });
     lines.push("");
     lines.push("Total: $" + formatMoney(total));
@@ -186,7 +186,7 @@
 
         var desc = document.createElement("span");
         desc.className = "shop-cart-item-desc";
-        desc.textContent = item.qty + " × " + item.size + " / " + item.color;
+        desc.textContent = item.qty + " × " + item.size;
 
         var price = document.createElement("span");
         price.className = "shop-cart-item-price";
@@ -224,14 +224,13 @@
         e.preventDefault();
 
         var size = document.getElementById("shirt-size").value;
-        var color = document.getElementById("shirt-color").value;
         var qty = parseInt(document.getElementById("shirt-qty").value, 10);
 
         if (!qty || qty < 1) {
           qty = 1;
         }
 
-        addToCart(size, color, qty);
+        addToCart(size, qty);
       });
     }
 

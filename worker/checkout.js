@@ -7,7 +7,7 @@
  *
  * Because the line items and amount are built here, the amount the customer
  * pays ALWAYS equals the itemized order — and every paid order shows the full
- * size/color/qty breakdown + name + email in your Stripe Dashboard.
+ * size/qty breakdown + name + email in your Stripe Dashboard.
  *
  * Secret required (set with: wrangler secret put STRIPE_SECRET_KEY):
  *   STRIPE_SECRET_KEY  -> your Stripe secret key (sk_live_... or sk_test_...)
@@ -23,7 +23,6 @@ var MAX_QTY_PER_LINE = 20;
 var MAX_LINES = 50;
 
 var ALLOWED_SIZES = ["X-Small", "Small", "Medium", "Large", "X-Large", "XX-Large"];
-var ALLOWED_COLORS = ["White", "Yellow", "Blue", "Green"];
 
 function corsHeaders(origin) {
   return {
@@ -51,7 +50,7 @@ function makeOrderId() {
 
 /**
  * Validate + normalize the incoming cart. Returns { items, count } or throws.
- * Only size/color labels come from the client; the PRICE never does.
+ * Only size labels come from the client; the PRICE never does.
  */
 function normalizeCart(rawCart) {
   if (!Array.isArray(rawCart) || rawCart.length === 0) {
@@ -67,20 +66,16 @@ function normalizeCart(rawCart) {
   for (var i = 0; i < rawCart.length; i++) {
     var entry = rawCart[i] || {};
     var size = String(entry.size || "");
-    var color = String(entry.color || "");
     var qty = parseInt(entry.qty, 10);
 
     if (ALLOWED_SIZES.indexOf(size) === -1) {
       throw new Error("Invalid size: " + size);
     }
-    if (ALLOWED_COLORS.indexOf(color) === -1) {
-      throw new Error("Invalid color: " + color);
-    }
     if (!qty || qty < 1 || qty > MAX_QTY_PER_LINE) {
-      throw new Error("Invalid quantity for " + size + " / " + color);
+      throw new Error("Invalid quantity for " + size);
     }
 
-    items.push({ size: size, color: color, qty: qty });
+    items.push({ size: size, qty: qty });
     count += qty;
   }
 
@@ -115,7 +110,7 @@ function buildStripeBody(cart, orderId, email, name, successUrl, cancelUrl) {
     params.set(base + "[quantity]", String(item.qty));
     params.set(base + "[price_data][currency]", "usd");
     params.set(base + "[price_data][unit_amount]", String(PRICE_CENTS));
-    params.set(base + "[price_data][product_data][name]", "UBF T-Shirt — " + item.size + " / " + item.color);
+    params.set(base + "[price_data][product_data][name]", "UBF T-Shirt — " + item.size);
   });
 
   return params.toString();
