@@ -110,7 +110,7 @@
   display: flex;
   width: max-content;
   gap: 18px;
-  animation: ubf-scroll 45s linear infinite;
+  animation: ubf-scroll 33s linear infinite;
 }
 .ubf-marquee:hover .ubf-track {
   animation-play-state: paused;
